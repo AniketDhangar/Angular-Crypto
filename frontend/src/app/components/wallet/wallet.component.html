@@ -1,0 +1,108 @@
+<div class="container">
+
+  <h1>Multi-Chain Wallet Generator</h1>
+
+  <button class="generate" (click)="generateWallet()">
+    Generate Wallet
+  </button>
+
+  <div *ngIf="wallet" class="mnemonic-box">
+    <h3>Mnemonic</h3>
+    <p>{{wallet.mnemonic}}</p>
+  </div>
+
+  <div *ngIf="wallet" class="buttons">
+
+    <button (click)="toggleBTC()">BTC</button>
+    <button (click)="toggleETH()">ETH</button>
+    <button (click)="toggleTRON()">TRON</button>
+    <button (click)="toggleUSDT_ERC20()">USDT ERC20</button>
+    <button (click)="toggleUSDT_TRC20()">USDT TRC20</button>
+
+  </div>
+
+  <div class="result">
+
+    <!-- BTC -->
+
+    <div *ngIf="showBTC" class="card">
+      <h4>Bitcoin (Testnet)</h4>
+
+      <p><b>Address:</b></p>
+      <p>{{wallet.btc.address}}</p>
+
+      <button (click)="copy(wallet.btc.address)">Copy Address</button>
+
+      <p><b>Private Key:</b></p>
+      <p>{{wallet.btc.privateKey}}</p>
+
+      <button (click)="copy(wallet.btc.privateKey)">Copy Private Key</button>
+    </div>
+
+    <!-- ETH -->
+
+    <div *ngIf="showETH" class="card">
+      <h4>Ethereum (Sepolia)</h4>
+
+      <p><b>Address:</b></p>
+      <p>{{wallet.eth.address}}</p>
+
+      <button (click)="copy(wallet.eth.address)">Copy Address</button>
+
+      <p><b>Private Key:</b></p>
+      <p>{{wallet.eth.privateKey}}</p>
+
+      <button (click)="copy(wallet.eth.privateKey)">Copy Private Key</button>
+    </div>
+
+    <!-- TRON -->
+
+    <div *ngIf="showTRON" class="card">
+      <h4>TRON (Nile)</h4>
+
+      <p><b>Address:</b></p>
+      <p>{{wallet.tron.address}}</p>
+
+      <button (click)="copy(wallet.tron.address)">Copy Address</button>
+
+      <p><b>Private Key:</b></p>
+      <p>{{wallet.tron.privateKey}}</p>
+
+      <button (click)="copy(wallet.tron.privateKey)">Copy Private Key</button>
+    </div>
+
+    <!-- USDT ERC20 -->
+
+    <div *ngIf="showUSDT_ERC20" class="card">
+      <h4>USDT ERC20</h4>
+
+      <p><b>Wallet Address:</b></p>
+      <p>{{wallet.usdt_erc20.walletAddress}}</p>
+
+      <button (click)="copy(wallet.usdt_erc20.walletAddress)">
+        Copy Address
+      </button>
+
+      <p><b>Contract:</b></p>
+      <p>{{wallet.usdt_erc20.contract}}</p>
+    </div>
+
+    <!-- USDT TRC20 -->
+
+    <div *ngIf="showUSDT_TRC20" class="card">
+      <h4>USDT TRC20</h4>
+
+      <p><b>Wallet Address:</b></p>
+      <p>{{wallet.usdt_trc20.walletAddress}}</p>
+
+      <button (click)="copy(wallet.usdt_trc20.walletAddress)">
+        Copy Address
+      </button>
+
+      <p><b>Contract:</b></p>
+      <p>{{wallet.usdt_trc20.contract}}</p>
+    </div>
+
+  </div>
+
+</div>

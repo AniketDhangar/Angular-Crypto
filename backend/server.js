@@ -1,3 +1,8 @@
+const ecc = require('@bitcoinerlab/secp256k1');
+const bitcoin = require('bitcoinjs-lib');
+
+bitcoin.initEccLib(ecc);
+
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");

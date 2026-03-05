@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
+const PORT = process.env.PORT || 5000;
+
 
 const walletRoutes = require("./routes/wallet.routes");
 
@@ -16,6 +18,6 @@ mongoose.connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/crypto_wall
 
 app.use("/wallet", walletRoutes);
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("Server running on port 5000");
 });

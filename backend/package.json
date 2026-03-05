@@ -7,6 +7,9 @@
     "build": "npm rebuild",
     "start": "node server.js"
   },
+   "overrides": {
+    "tiny-secp256k1": "@bitcoinerlab/secp256k1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

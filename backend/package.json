@@ -1,16 +1,10 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "npm rebuild",
     "start": "node server.js"
   },
-   
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@bitcoinerlab/secp256k1": "^1.2.0",
     "bip32": "^5.0.1",
@@ -25,5 +19,8 @@
     "mongoose": "^9.2.4",
     "tiny-secp256k1": "^2.2.4",
     "tronweb": "^6.2.1"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }

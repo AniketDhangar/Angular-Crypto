@@ -15,7 +15,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// root route (important for Render check)
 app.get("/", (req, res) => {
   res.send("API running");
 });
@@ -29,6 +28,6 @@ app.use("/wallet", walletRoutes);
 
 const PORT = process.env.PORT;
 
-app.listen(PORT,  () => {
+app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

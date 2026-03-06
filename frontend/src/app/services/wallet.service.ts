@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WalletService {
 
-  private API = "https://angular-crypto.onrender.com/wallet";
+  private API = "https://angular-crypto-production.up.railway.app/wallet";
 
   constructor(private http: HttpClient) {}
 
